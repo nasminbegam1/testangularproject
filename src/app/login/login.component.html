@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="loginForm" (submit)="loginFormSubmit()">
+    <div class="row">
+      <div class="col-sm-4">
+        <label class="control-label col-sm-12" for="email">USER NAME:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+        <span style="color: red" *ngIf="loginForm.controls.email.invalid && ( loginForm.controls.email.dirty)">Please enter email</span>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+          <label class="control-label col-sm-12" for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password" formControlName="password">
+          <span style="color: red" *ngIf="loginForm.controls.password.invalid && ( loginForm.controls.password.dirty)">Please enter password</span>
+        </div>
+    </div>
+
+    <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+
+    <div class="row">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" [disabled]="loginForm.invalid">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
