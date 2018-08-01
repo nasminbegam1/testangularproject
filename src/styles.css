@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+.frm-error {
+    color : #CCC;
+    font-size: 12px;
+}
+
+.right-container-content .container-header {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 15px;
+    color: #565656;
+}
+.right-container-content .container-header h3 {
+    font-size: 25px;
+}
+.right-container-content .container-header p {
+    font-size: 12px;
+}
+.table .btn{
+    border-radius: 50%;
+}
+.pull-right  {
+    float:right;
+    clear: right;
+}
+.pull-left  {
+    float:left;
+}
+.container-action-container {
+    padding: 10px;
+    border-bottom: 1px solid #CCC;
+    margin: 5px 0;
+}
+.container-action-container .search-container {
+    float: left;
+    width: 80%;
+}
+.container-action-container .search-container .form-control {
+    display: inline-block;
+    width: auto;
+    margin: 0 5px;
+}
+.container-action-container  .action-btn-container {
+    float: right;
+    clear: right;
+    width: 19%;
+    text-align: right;
+}

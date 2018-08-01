@@ -1,4 +1,16 @@
+<div class="header-container">
 <app-header></app-header>
+</div>
+<div class="main-container">
+
+<perfect-scrollbar class="left-container"  [config]="config">
 <app-left-nav></app-left-nav>
-<app-alert></app-alert>
-<router-outlet></router-outlet>
+</perfect-scrollbar>
+<div class="right-container">
+    <div class="right-container-content">
+        <app-alert></app-alert>
+        
+        <router-outlet></router-outlet>
+    </div>
+</div>
+</div>

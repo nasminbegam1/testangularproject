@@ -1,0 +1,50 @@
+<div class="container-header">
+    <h3>Customer</h3>
+    <p>Create</p>
+    </div>
+    <div class="container-body">
+      
+      <form [formGroup]="customerForm" (submit)="customerSearch()">
+        <input type="hidden" formControlName="startPosition">
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="control-label col-sm-12" for="username">USER NAME:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" formControlName="username">
+            <span style="color: red" *ngIf="customerForm.controls.username.invalid && ( customerForm.controls.username.dirty)">Please enter username</span>
+          </div>
+          <div class="col-sm-4">
+              <label class="control-label col-sm-12" for="firstname">FIRST NAME:</label>
+              <input type="text" class="form-control" id="firstname" placeholder="Enter First Name" autocomplete="firstname" formControlName="firstname">
+            </div>
+          <div class="col-sm-4">
+              <label class="control-label col-sm-12" for="lastname">LAST NAME:</label>
+              <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" autocomplete="lastname" formControlName="lastname">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+              <label class="control-label col-sm-12" for="customercode">CUSTOMER CODE:</label>
+              <input type="text" class="form-control" id="customercode" placeholder="Enter Customer Code" formControlName="customercode">
+            </div>
+            <div class="col-sm-4">
+                <label class="control-label col-sm-12" for="nickname">NICKNAME:</label>
+                <input type="text" class="form-control" id="nickname" placeholder="Enter First Name" formControlName="nickname">
+              </div>
+            <div class="col-sm-4">
+                <label class="control-label col-sm-12" for="userId">USER ID:</label>
+                <input type="text" class="form-control" id="userId" placeholder="Enter User Id" formControlName="userId">
+            </div>
+        </div>
+    
+        <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+    
+        <div class="row">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" *ngIf="!customerForm.invalid">Submit</button>
+          </div>
+        </div>
+      </form>
+      
+    
+      
+    </div>

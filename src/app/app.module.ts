@@ -13,9 +13,20 @@ import { HeaderComponent } from './layout/header/header.component';
 import { LeftNavComponent } from './layout/left-nav/left-nav.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerComponent } from './customer/customer.component';
+import { CreateCustomerComponent } from './customer/create/create.component';
 import { AlertComponent } from './alert/alert.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+ 
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -26,7 +37,8 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
     LeftNavComponent,
     LoginComponent,
     CustomerComponent,
-    AlertComponent
+    AlertComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +47,13 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule.forRoot(),
-    LoadingBarHttpClientModule
+    LoadingBarHttpClientModule,
+    PerfectScrollbarModule
   ],
-  providers: [Global],
+  providers: [Global,{
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

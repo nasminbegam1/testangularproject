@@ -1,3 +1,47 @@
-<p>
-  left-nav works!
-</p>
+<ul class="left-main-nav">
+    <li class="{{ (menuName=='dashboard')?'active':'' }}">
+        <a href="javascript:" class="has-sub-menu" (click)="menuName='dashboard'"><i class="fa fa-home"></i> Dashboard</a>
+        <ul class="sub-nav {{ (menuName=='dashboard')?'active':'' }}" *ngIf="menuName=='dashboard'">
+          <li><a href="javascript:">Dashboard 1</a></li>
+          <li><a href="javascript:">Dashboard 2</a></li>
+          <li><a href="javascript:">Dashboard 3</a></li>
+        </ul>
+      </li>
+      <li class="{{ (menuName=='user')?'active':'' }}">
+        <a href="javascript:" class="has-sub-menu" (click)="menuName='user'"><i class="fa fa-users"></i> User</a>
+        <ul class="sub-nav {{ (menuName=='user')?'active':'' }}"  *ngIf="menuName=='user'">
+          <li><a href="javascript:">User 1</a></li>
+          <li><a href="javascript:">User 2</a></li>
+          <li><a href="javascript:">User 3</a></li>
+          <li><a href="javascript:">User 4</a></li>
+        </ul>
+      </li>
+      <li class="{{ (menuName=='message')?'active':'' }}">
+        <a href="javascript:" class="has-sub-menu" (click)="menuName='message'"><i class="fa fa-envelope"></i> Message</a>
+        <ul class="sub-nav {{ (menuName=='message')?'active':'' }}"  *ngIf="menuName=='message'">
+          <li><a href="javascript:">Message 1</a></li>
+          <li><a href="javascript:">Message 2</a></li>
+          <li><a href="javascript:">Message 3</a></li>
+          <li><a href="javascript:">Message 4</a></li>
+        </ul>
+      </li>
+      <li class="{{ (menuName=='category')?'active':'' }}">
+        <a href="javascript:" (click)="menuName='category'"><i class="fa fa-list"></i> Category</a>
+        <ul class="sub-nav {{ (menuName=='category')?'active':'' }}"  *ngIf="menuName=='category'">
+          <li><a href="javascript:">Category 1</a></li>
+          <li><a href="javascript:">Category 2</a></li>
+          <li><a href="javascript:">Category 3</a></li>
+          <li><a href="javascript:">Category 4</a></li>
+        </ul>
+      </li>
+      <li class="{{ (menuName=='post')?'active':'' }}">
+        <a href="javascript:" (click)="menuName='post'"><i class="fa fa-file"></i> Posts</a>
+        <ul class="sub-nav {{ (menuName=='post')?'active':'' }}"  *ngIf="menuName=='post'">
+          <li><a href="javascript:">Posts 1</a></li>
+          <li><a href="javascript:">Posts 2</a></li>
+          <li><a href="javascript:">Posts 3</a></li>
+          <li><a href="javascript:">Posts 4</a></li>
+        </ul>
+      </li>
+</ul>
+

@@ -1,3 +1,13 @@
-<p>
-  header works!
-</p>
+<div class="logo">
+  <h1>LOGO</h1>
+</div>
+<div class="header-menu">
+  <a class="user-name" (click)="headerMenu = (headerMenu==1)?0:1" href="javascript:">
+    <img class="user-image" src="assets/user.jpg" />Admin</a>
+  <ul class="user-menu" *ngIf="headerMenu==1">
+    <li><a href="">Profile</a></li>
+    <li><a href="">Change Password</a></li>
+    <li><a href="">Logout</a></li>
+  </ul>
+</div>
+<div class="clearfix"></div>

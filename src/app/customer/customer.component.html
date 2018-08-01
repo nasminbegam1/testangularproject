@@ -1,42 +1,67 @@
-<div class="container">
-  <form [formGroup]="customerForm" (submit)="customerSearch()">
-    <input type="hidden" formControlName="startPosition">
-    <div class="row">
-      <div class="col-sm-4">
-        <label class="control-label col-sm-12" for="username">USER NAME:</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter username" formControlName="username">
-        <span style="color: red" *ngIf="customerForm.controls.username.invalid && ( customerForm.controls.username.dirty)">Please enter username</span>
-      </div>
-      <div class="col-sm-4">
-          <label class="control-label col-sm-12" for="firstname">FIRST NAME:</label>
-          <input type="text" class="form-control" id="firstname" placeholder="Enter First Name" autocomplete="firstname" formControlName="firstname">
-        </div>
-      <div class="col-sm-4">
-          <label class="control-label col-sm-12" for="lastname">LAST NAME:</label>
-          <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" autocomplete="lastname" formControlName="lastname">
-      </div>
+<div class="container-header">
+<h3>Customer</h3>
+<p>List</p>
+</div>
+<div class="container-body">
+  <div class="container-action-container" >
+    <div class="search-container">
+      <form>
+        <input type="text" class="form-control" placeholder="Name"/>
+        <input type="text" class="form-control" placeholder="Address"/>
+        <select class="form-control">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+        <input type="submit" class="btn btn-danger" value="Search">
+      </form>
     </div>
-    <div class="row">
-        <div class="col-sm-4">
-          <label class="control-label col-sm-12" for="customercode">CUSTOMER CODE:</label>
-          <input type="text" class="form-control" id="customercode" placeholder="Enter Customer Code" formControlName="customercode">
-        </div>
-        <div class="col-sm-4">
-            <label class="control-label col-sm-12" for="nickname">NICKNAME:</label>
-            <input type="text" class="form-control" id="nickname" placeholder="Enter First Name" formControlName="nickname">
-          </div>
-        <div class="col-sm-4">
-            <label class="control-label col-sm-12" for="userId">USER ID:</label>
-            <input type="text" class="form-control" id="userId" placeholder="Enter User Id" formControlName="userId">
-        </div>
-    </div>
+    <div class="action-btn-container"  ><a routerLink="/customer/create" class="btn btn-info">Create</a></div>
+    <div class="clearfix"></div>
+  </div>
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th>#ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Raja</td>
+        <td>Kolkata</td>
+        <td><span class="badge badge-success">Active</span></td>
+        <td>
+          <a href="" class="btn btn-info btn-sm" title="Edit">&#10000;</a>&nbsp;
+          <a href="" class="btn btn-danger btn-sm" title="Delete">&#10006;</a>
+        </td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Saja</td>
+          <td>Kolkata</td>
+          <td><span class="badge badge-danger">Inactive</span></td>
+          <td>
+            <a href="" class="btn btn-info btn-sm" title="Edit">&#10000;</a>&nbsp;
+            <a href="" class="btn btn-danger btn-sm" title="Delete">&#10006;</a>
+          </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Raja</td>
+            <td>Kolkata</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td>
+              <a href="" class="btn btn-info btn-sm" title="Edit">&#10000;</a>&nbsp;
+              <a href="" class="btn btn-danger btn-sm" title="Delete">&#10006;</a>
+            </td>
+          </tr>
+    </tbody>
+  </table>
 
-    <div class="row"><div class="col-sm-12">&nbsp;</div></div>
 
-    <div class="row">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default" *ngIf="!customerForm.invalid">Submit</button>
-      </div>
-    </div>
-  </form>
+  
 </div>

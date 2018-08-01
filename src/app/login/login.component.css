@@ -1,0 +1,19 @@
+.login-container {
+    width: 400px;
+    min-height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 2px 7px #CCC;
+    padding: 10px;
+}
+.login-container h3 {
+    border-bottom:1px solid #CCC;
+    padding-bottom: 10px;
+    margin-bottom: 10px; 
+}
+.log-form {
+    width: 80%;
+    margin: 20px auto;
+}
