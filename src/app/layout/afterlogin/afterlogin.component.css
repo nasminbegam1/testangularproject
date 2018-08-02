@@ -28,6 +28,7 @@
 	height: 100%;
 	padding: 10px;
     background: #D9DFE6;
+  overflow-y:scroll;
 }
 .right-container .right-container-content {
     background: #FFF;
